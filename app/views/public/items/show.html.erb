@@ -3,7 +3,9 @@
     <div class="mt-auto">
       <%= image_tag @item.image, class: "img-fluid w-100 h-100" %>
     </div>
-
+    <%= form_with model:@cart_item,url:cart_items_path do |f| %>
+      <%= f.hidden_field :item_id, :value => @item.id %>
+    <% end %>
 
   </div>
 </div>
