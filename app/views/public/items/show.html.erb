@@ -5,7 +5,17 @@
     </div>
     <%= form_with model:@cart_item,url:cart_items_path do |f| %>
       <%= f.hidden_field :item_id, :value => @item.id %>
+      <p class="h4 font-weight-bold"><%= @item.name %></p>
+      <p><%= @item.introduction %>
+      <p class="h5 font-weight-bold"></p>
+        ￥<%= @item.prince.to_s(:delimited) %>
+        <span class="small">（税込）</span>
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.submit "カートに入れる", class: "btn btn-primary" %>
+        </div>
+      </div>
     <% end %>
-
   </div>
 </div>
