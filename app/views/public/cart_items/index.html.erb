@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row mt-4 mb-4">
+    <h3 class="col">ショッピングカート</h3>
+    <div class="col-4 text-center pt-3">
+      <%= link_to destroy_all_path, method: :delete do %>
+        <button class="btn btn-danger">カートを空にする</button>
+      <% end %>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <table class="table table-bordered border-dark col-lg-12">
+      <thead>
+        <tr>
+          <th class="col-md-5">商品名</th>
+          <th class="col-md-2">単価（税込）</th>
+          <th class="col-md-2">数量</th>
+          <th class="col-md-1">小計</th>
+        </tr>
+      </thead>
+
+    </table>
+  </div>
+</div>
