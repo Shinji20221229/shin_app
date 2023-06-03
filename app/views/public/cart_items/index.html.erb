@@ -30,8 +30,17 @@
               <%= form_for(cart_item, url:cart_item_path(cart_item)) do |c| %>
                 <p>
                   <%= c.number_field :amount, min:1, max:100, step:1 %>
-
+                  <%= c.submit "変更", class: "btn btn-success" %>
                 </p>
+              <% end %>
+            </td>
+            <td>
+              <%= cart_item.subtotal %>
+            </td>
+            <td>
+              <%= link_to cart_item_path(cart_item), method: :delete do %>
+                <button class="tbn tbn-danger">削除する</button>
+              <% end %>
             </td>
           </tr>
       </tbody>
