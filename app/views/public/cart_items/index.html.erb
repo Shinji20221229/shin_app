@@ -63,5 +63,13 @@
       </table>
     </div>
   </div>
-
+  <div class="row mt-5 mb-4">
+    <div class="col text-center">
+      <% if current_customer.cart_item.any? %>
+        <%= link_to new_order_path do %>
+          <button class="btn btn-md btn-success">情報入力に進む</button>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
